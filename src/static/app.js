@@ -25,10 +25,10 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
-          <div class="participants-section" style="margin-top:12px;padding:10px;background:#eef3fb;border-radius:4px;border:1px solid #c5cae9;">
-            <h5 style="margin-bottom:6px;color:#3949ab;font-size:15px;font-weight:bold;">Participants</h5>
-            <ul class="participants-list" style="list-style-type:disc;padding-left:20px;margin:0;color:#333;font-size:15px;">
-              ${details.participants.map(email => `<li style="margin-bottom:2px;word-break:break-all;">${email}</li>`).join('')}
+          <div class="participants-section">
+            <h5>Participants</h5>
+            <ul class="participants-list">
+              ${details.participants.map(email => `<li>${email}</li>`).join('')}
             </ul>
           </div>
         `;
